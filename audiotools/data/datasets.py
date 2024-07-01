@@ -129,6 +129,7 @@ class AudioLoader:
             "item_idx": item_idx,
             "source": str(self.sources[source_idx]),
             "path": str(path),
+            "offset": signal.metadata["offset"]
         }
         if self.transform is not None:
             item["transform_args"] = self.transform.instantiate(state, signal=signal)
